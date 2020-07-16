@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject blocs;
+    public GameObject blocks;
     public int X;
     public int Z;
     public bool createBLocks;
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
             {
                 for (int j = 0; j < Z; j++)
                 {
-                    Instantiate(blocs, new Vector3(i, 0, j), transform.rotation);
+                    Instantiate(blocks, new Vector3(i, 0, j), transform.rotation);
                 }
             }
         }
