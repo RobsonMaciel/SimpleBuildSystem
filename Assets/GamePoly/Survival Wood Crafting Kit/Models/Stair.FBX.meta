@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 3d8d598310cd0b441b15062cc35f999d
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      43: 4300000
+    second: Stair_Step_K
+  - first:
+      43: 4300002
+    second: Stair_Step_N
+  - first:
+      43: 4300004
+    second: Stair_Step_M
+  - first:
+      43: 4300006
+    second: Stair_Step_L
+  - first:
+      43: 4300008
+    second: Stair_Step_O
+  - first:
+      43: 4300010
+    second: Stair_Corner_A
+  - first:
+      43: 4300012
+    second: Stair_Step_P
+  - first:
+      43: 4300014
+    second: Stair_Step_Q
+  - first:
+      43: 4300016
+    second: Stair_Side_A
+  - first:
+      43: 4300018
+    second: Stair_Corner_F
+  - first:
+      43: 4300020
+    second: Stair_Step_J
+  - first:
+      43: 4300022
+    second: Stair_Back
+  - first:
+      43: 4300024
+    second: Stair_Rail_B
+  - first:
+      43: 4300026
+    second: Stair_Rail_A
+  - first:
+      43: 4300028
+    second: Stair_Corner_C
+  - first:
+      43: 4300030
+    second: Stair_Corner_D
+  - first:
+      43: 4300032
+    second: Stair_Side_B
+  - first:
+      43: 4300034
+    second: Stair_Side_D
+  - first:
+      43: 4300036
+    second: Stair_Side_E
+  - first:
+      43: 4300038
+    second: Stair_Side_F
+  - first:
+      43: 4300040
+    second: Stair_Step_A
+  - first:
+      43: 4300042
+    second: Stair_Step_H
+  - first:
+      43: 4300044
+    second: Stair_Step_B
+  - first:
+      43: 4300046
+    second: Stair_Step_C
+  - first:
+      43: 4300048
+    second: Stair_Step_D
+  - first:
+      43: 4300050
+    second: Stair_Side_C
+  - first:
+      43: 4300052
+    second: Stair_Step_E
+  - first:
+      43: 4300054
+    second: Stair_Corner_E
+  - first:
+      43: 4300056
+    second: Stair_Step_F
+  - first:
+      43: 4300058
+    second: Stair_Step_G
+  - first:
+      43: 4300060
+    second: Stair_Corner_B
+  - first:
+      43: 4300062
+    second: Stair_Step_I
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

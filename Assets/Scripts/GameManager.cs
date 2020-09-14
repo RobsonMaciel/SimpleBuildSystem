@@ -30,21 +30,35 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha0))
         {
             builder.selectedObject = null;
+            setActiveFalse();
         }
 
         if (Input.GetKey(KeyCode.Alpha1))
         {
+            setActiveFalse();
+            objectToInstance[0].SetActive(true);
             builder.selectedObject = objectToInstance[0];
         }
 
         if (Input.GetKey(KeyCode.Alpha2))
         {
+            setActiveFalse();
+            objectToInstance[1].SetActive(true);
             builder.selectedObject = objectToInstance[1];
         }
+        //
+        // if (Input.GetKey(KeyCode.Alpha3))
+        // {
+        //     setActiveFalse();
+        //     builder.selectedObject = objectToInstance[2];
+        // }
+    }
 
-        if (Input.GetKey(KeyCode.Alpha3))
+    void setActiveFalse()
+    {
+        foreach (GameObject o in objectToInstance)
         {
-            builder.selectedObject = objectToInstance[2];
+            o.SetActive(false);
         }
     }
 }

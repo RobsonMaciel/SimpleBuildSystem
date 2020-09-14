@@ -41,7 +41,9 @@ public class OverlapBoxCollider : MonoBehaviour
     void checkCollisions()
     {
         var transform1 = transform;
-        hitColliders = Physics.OverlapBox(transform.position, transform1.lossyScale / 2, transform1.rotation.normalized,
+        Vector3 transform1LossyScale = transform1.lossyScale / 2;
+        Vector3 lossyScalePercent = transform1LossyScale * 0.20f;
+        hitColliders = Physics.OverlapBox(transform.position, transform1LossyScale - lossyScalePercent , transform1.rotation.normalized,
             layerMask);
         IsTriggered = hitColliders.Length > 0;
     }

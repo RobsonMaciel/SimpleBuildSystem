@@ -9,6 +9,11 @@ public class ConstructionParts : MonoBehaviour
     public string tagName;
     public List<GameObject> meshs;
     public List<GameObject> sockets;
+    
+    [SerializeField]
+    private bool isFundamentalParts;
+
+    public bool IsFundamentalParts => isFundamentalParts;
 
     public GameObject Peace
     {
