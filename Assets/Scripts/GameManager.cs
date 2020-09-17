@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject player;
     public GameObject blocks;
     public int X;
     public int Z;
@@ -33,10 +34,15 @@ public class GameManager : MonoBehaviour
             setActiveFalse();
         }
 
+        Vector3 playerPosition = player.transform.position;
+        Vector3 playerPositionYAdjusted = new Vector3(playerPosition.x, playerPosition.y + 5,
+            playerPosition.z);
+
         if (Input.GetKey(KeyCode.Alpha1))
         {
             setActiveFalse();
             objectToInstance[0].SetActive(true);
+            objectToInstance[0].transform.position = playerPositionYAdjusted;
             builder.selectedObject = objectToInstance[0];
         }
 
@@ -44,8 +50,10 @@ public class GameManager : MonoBehaviour
         {
             setActiveFalse();
             objectToInstance[1].SetActive(true);
+            objectToInstance[1].transform.position = playerPositionYAdjusted;
             builder.selectedObject = objectToInstance[1];
         }
+
         //
         // if (Input.GetKey(KeyCode.Alpha3))
         // {

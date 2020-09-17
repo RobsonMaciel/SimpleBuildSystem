@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08724b005d271468ef645895550091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2111370643}
   blocks: {fileID: 245784038789648741, guid: 2d7959cf6a44aa84d8f7cbe5f6392dc4, type: 3}
   X: 20
   Z: 20
@@ -465,7 +466,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 2.7107536e-20, w: 7.737127e+25}
+  m_BoundingSphereOverride: {x: 0, y: 1.4876e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -489,6 +490,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1522099057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2111370643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 894925471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140609326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f,
@@ -510,6 +517,7 @@ MonoBehaviour:
   layerMask: 0
   selectedObject: {fileID: 0}
   snapped: 0
+  oldPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &502249387637897801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 502249388032650035, guid: c040a71cc22db7d4fb902d36b9f70097,
