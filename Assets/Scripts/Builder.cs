@@ -28,7 +28,7 @@ public class Builder : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && !checkColliders() && snapped)
             {
-                instantiateObjectInTheScene();
+                InstantiateObjectInTheScene();
             }
         }
     }
@@ -43,7 +43,7 @@ public class Builder : MonoBehaviour
         {
             Vector3 transformPosition = hit.transform.GetChild(0).transform.position;
             selectedObject.transform.position =
-                Movegameobjectfrompointatopointbsmoothly(oldPosition, transformPosition, 20);
+                MovePartsSmoothlyBetweenPoints(oldPosition, transformPosition, 20);
             holdObject(selectedObject, hit.transform.rotation);
             snapped = true;
             Debug_DrawLine(normalizedPosition, hit.point, Color.green);
@@ -52,20 +52,26 @@ public class Builder : MonoBehaviour
         {
             Vector3 distanceOfRayCast = transform.position + transform.forward * DistanceOfRayCast;
             selectedObject.transform.position =
-                Movegameobjectfrompointatopointbsmoothly(oldPosition, distanceOfRayCast, 20);
-            holdObject(selectedObject, new Quaternion(0.0f, transform.rotation.y, 0.0f, transform.rotation.w));
+                MovePartsSmoothlyBetweenPoints(oldPosition, distanceOfRayCast, 20);
+            holdObject(selectedObject, 
+                new Quaternion(
+                selectedObject.transform.rotation.x,
+                selectedObject.transform.rotation.y,
+                selectedObject.transform.rotation.z,
+                selectedObject.transform.rotation.w
+                ));
             snapped = constructionParts.IsFundamentalParts;
             Debug_DrawLine(normalizedPosition, selectedObject.transform.position, Color.red);
         }
     }
 
-    private Vector3 Movegameobjectfrompointatopointbsmoothly(Vector3 pointA, Vector3 pointB, int speedToSnap)
+    private Vector3 MovePartsSmoothlyBetweenPoints(Vector3 pointA, Vector3 pointB, int speedToSnap)
     {
         float step = speedToSnap * Time.deltaTime;
         return Vector3.MoveTowards(pointA, pointB, step);
     }
 
-    private void instantiateObjectInTheScene()
+    private void InstantiateObjectInTheScene()
     {
         GameObject instantiate = Instantiate(selectedObject, selectedObject.transform.position,
             selectedObject.transform.rotation);

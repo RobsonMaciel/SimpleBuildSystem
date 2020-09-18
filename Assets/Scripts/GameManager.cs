@@ -34,32 +34,55 @@ public class GameManager : MonoBehaviour
             setActiveFalse();
         }
 
-        Vector3 playerPosition = player.transform.position;
-        Vector3 playerPositionYAdjusted = new Vector3(playerPosition.x, playerPosition.y + 5,
-            playerPosition.z);
-
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            setActiveFalse();
-            objectToInstance[0].SetActive(true);
-            objectToInstance[0].transform.position = playerPositionYAdjusted;
-            builder.selectedObject = objectToInstance[0];
+            SelectBuildParts(0);
         }
 
         if (Input.GetKey(KeyCode.Alpha2))
         {
-            setActiveFalse();
-            objectToInstance[1].SetActive(true);
-            objectToInstance[1].transform.position = playerPositionYAdjusted;
-            builder.selectedObject = objectToInstance[1];
+            SelectBuildParts(1);
         }
 
-        //
-        // if (Input.GetKey(KeyCode.Alpha3))
-        // {
-        //     setActiveFalse();
-        //     builder.selectedObject = objectToInstance[2];
-        // }
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.R))
+        {
+            RotateParts(-45);
+        }else if (Input.GetKey(KeyCode.R))
+        {
+            RotateParts(45);
+        }
+    }
+
+    public Vector3 currentEulerAngles;
+    public float x;
+    public float y;
+    public float z;
+    public Vector3 deltaTime;
+
+    void RotateParts(float rotationSpeed)
+    {
+        y = 3 - y;
+        deltaTime = new Vector3(x, y, z) * Time.deltaTime;
+        currentEulerAngles += deltaTime * rotationSpeed;
+        builder.selectedObject.transform.eulerAngles = currentEulerAngles;
+    }
+
+    private void SelectBuildParts(int indexObject)
+    {
+        Transform mainCameraTransform = Camera.main.transform;
+        Vector3 transformForwardNormalized =
+            new Vector3(
+                mainCameraTransform.forward.x * 5f,
+                mainCameraTransform.forward.y,
+                mainCameraTransform.forward.z * 5f
+            );
+
+        Vector3 playerPositionYAdjusted = mainCameraTransform.position + transformForwardNormalized;
+
+        setActiveFalse();
+        objectToInstance[indexObject].SetActive(true);
+        objectToInstance[indexObject].transform.position = playerPositionYAdjusted;
+        builder.selectedObject = objectToInstance[indexObject];
     }
 
     void setActiveFalse()
